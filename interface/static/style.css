@@ -1,0 +1,233 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    height: 400px;
+}
+
+
+.login-container h2 {
+    margin-top: 10px;
+    text-align:center;
+}
+
+.login-container input[type="email"]
+{
+    width: 480px;
+    margin-top: 50px;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+   
+.login-container input[type="password"] {
+
+width: 480px;
+padding: 13px;
+margin-top: 20px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+
+.login-container input[type="submit"] {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover {
+    background: color #000;
+}
+
+
+
+.message {
+    color:#000;
+    font-size: 14px; /* Font size */
+    margin-top: 20px; 
+}
+.photo {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+
+}
+
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 900px; 
+    margin: 1px auto 20px; 
+    top:30 px;
+    
+}
+
+.header h1 {
+    color: #a65e46;
+    text-align: center;
+    margin-bottom: 10px; 
+    margin-top: 20px;
+}
+
+
+.content p {
+    color: #000;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px; 
+    margin-top: 70px;
+}
+
+.header h1 {
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent wrapping */
+    animation: typingHeader 2s steps(120) ;
+}
+
+@keyframes typingHeader {
+    from { width: 0; }
+    to { width: 100%; }
+}
+.home-button{
+    position: fixed;
+    top: 635px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color:#000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.home-button:hover {
+    background-color:#000;
+}
+
+
+.logout{
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px; 
+    text-decoration: none;
+    font-size: 20px;
+}
+.logout {
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent wrapping */
+    animation: typingHeader 2s steps(120) ;
+}
+
+@keyframes typingHeader {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+
+
+.login-button-from-logout{
+    position: fixed;
+    top: 635px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color:#000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration-line:none;
+}
+.login-button-from-logout:hover{
+    background-color:#000;
+
+}
+.container-dashboard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 600px;
+    height: 600px;
+}
+textarea {
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px  #ccc;
+    border-radius: 3px;
+}
+
+.button-getResponse {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.button-getResponse :hover {
+    background-color: #333; 
+}
+.logout-button{
+    position: fixed;
+    top: 600px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color:#000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
+.logout-button:hover{
+    background-color: #000;
+}
+.bas{
+    position: fixed;
+    top: 690px;
+    text-align: center;
+    font-size: smaller;
+
+}
+
+
+
+
+
+
+
+
+

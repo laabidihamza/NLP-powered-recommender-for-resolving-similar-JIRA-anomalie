@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/style.css"> 
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        
+        <form action="#" method="post">
+            <input type="email" name="email"  pattern = "[a-zA-Z0-9]{1,10}@vermeg.[a-zA-Z0-9]{1,10}"placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+
+        {% if message %}
+        <p class="message">{{ message }}</p>
+        {% endif %}
+    </div>
+
+    <img src="https://media.licdn.com/dms/image/D4E0BAQFPJ4arGSb5Tg/company-logo_200_200/0/1696589536789/vermeg_logo?e=2147483647&v=beta&t=FfwuuyuYScYvQyK_Or5Du6gt03SQEg8LtSQJSjuGmPc" alt="logo Photo" class="photo" >
+    <p class="bas">Roua-Hamza/2024</p> 
+</body>
+</html>
