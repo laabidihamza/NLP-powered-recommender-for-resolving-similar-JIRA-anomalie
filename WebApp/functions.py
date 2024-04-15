@@ -7,7 +7,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 model = SentenceTransformer("paraphrase-multilingual-mpnet-base-v2")
 
 
-def col_embed(df):
+def col_embeds(df):
     embeddings = []
 
     # Iterate through each row of the column
@@ -19,17 +19,20 @@ def col_embed(df):
 
     return embeddings
 
+
 def sentence_embed(sentence):
     embedding = model.encode(sentence)
     return embedding
 
 
-def calculate_similarity(input_embedding, embeddings):
+def calculate_similarity(input_sentence, embeddings):
     # input_embedding = model.encode(input_sentence)
 
     similarities = []
     for embedding in embeddings:
-        similarity = cosine_similarity(input_embedding.reshape(1, -1), embedding.reshape(1, -1))[0][0]
+        similarity = cosine_similarity(
+            input_sentence.reshape(1, -1), embedding.reshape(1, -1)
+        )[0][0]
         similarities.append(similarity)
 
     return similarities

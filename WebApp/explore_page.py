@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 
 data_path = (
-    "C:/Users/abidi/Documents/ISAMM/Stage - Vermeg/repo/WebApp/df_for_WebApp.csv"
+    "C:/Users/abidi/Documents/ISAMM/Stage - Vermeg/repo/WebApp/df_for_WebApp.pkl"
 )
-data = pd.read_csv(data_path)
+x = pd.read_pickle(data_path)
 
 
 def show_explore_page():
