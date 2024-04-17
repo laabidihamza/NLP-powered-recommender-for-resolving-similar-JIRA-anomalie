@@ -5,22 +5,19 @@ import streamlit as st
 from sentence_transformers import SentenceTransformer, util
 from sklearn.metrics.pairwise import cosine_similarity
 
-# from functions import col_embeds, calculate_similarity, sentence_embed
-
 model = SentenceTransformer("paraphrase-multilingual-mpnet-base-v2")
 ss_model = SentenceTransformer("multi-qa-mpnet-base-cos-v1")
 
-data_path = (
-    "C:/Users/abidi/Documents/ISAMM/Stage - Vermeg/repo/WebApp/df_for_WebApp.pkl"
-)
-# data_path = "C:/Users/abidi/Documents/ISAMM/Stage - Vermeg/repo/Models_and_similarity_test/cleaned_data.csv"
+# data_path = (
+#     "C:/Users/abidi/Documents/ISAMM/Stage - Vermeg/repo/WebApp/df_for_WebApp.pkl"
+# )
+data_path = "df_for_WebApp.pkl"
 data = pd.read_pickle(data_path)
 
 
 def sentence_embed(sentence):
     embedding = model.encode(sentence)
     return embedding
-
 
 @st.cache_data
 def col_embed(df):
@@ -31,7 +28,6 @@ def col_embed(df):
         # Append the embedding to the list
         embeddings.append(embedding)
     return embeddings
-
 
 @st.cache_data
 def calculate_similarity(input_sentence, embeddings):
@@ -45,7 +41,7 @@ def calculate_similarity(input_sentence, embeddings):
     return similarities
 
 
-def show_search_page():
+def show_search_page(data):
     st.title("Welcome to our Text Similarity Tester!")
 
     summary = st.text_input(
@@ -59,7 +55,7 @@ def show_search_page():
     description = st.text_area(
         "Enter your descriptionn here:",
         height=50,
-        max_chars=500,
+        max_chars=1600,
         placeholder="Exp: I have authentication  problem ...",
         disabled=False,
         label_visibility="visible",
