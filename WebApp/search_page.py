@@ -63,15 +63,6 @@ def show_search_page(data):
 
     searchB = st.button("Search for similar issues")
 
-    # @st.cache
-    # def load_model():
-    #     model = SentenceTransformer("paraphrase-multilingual-mpnet-base-v2")
-    #     return model
-
-    # model = load_model()
-
-    # data['EmbeddingsSummary'] = col_embed(data['Summary'])
-
     if searchB:
         st.write("Searching for similar issues ...")
         st.write("Here are the top 5 most similar issues:")
