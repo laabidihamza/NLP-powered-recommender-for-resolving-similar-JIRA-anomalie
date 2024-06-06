@@ -1,2 +1,4 @@
 # SECRET
 .env
+
+upload_to_database.py
